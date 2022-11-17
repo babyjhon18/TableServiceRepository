@@ -5,9 +5,6 @@ function CardView(){
         <div>
             <div>
                 <Card></Card>
-            </div>
-            <div>
-                <Card></Card>
                 <Card></Card>
                 <Card></Card>
                 <Card></Card>
