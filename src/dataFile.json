@@ -2,85 +2,136 @@
     "tables":[
         {
             "id": 1,
-            "table#": 11,
-            "doc#": 14,
+            "table": 20,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         },
         {
             "id": 1,
-            "table#": 12,
-            "doc#": 14,
+            "table": 19,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         },
         {
             "id": 1,
-            "table#": 12,
-            "doc#": 14,
+            "table": 19,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         },
         {
             "id": 1,
-            "table#": 12,
-            "doc#": 14,
+            "table": 19,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         },
         {
             "id": 1,
-            "table#": 12,
-            "doc#": 14,
+            "table": 19,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         },
         {
             "id": 1,
-            "table#": 12,
-            "doc#": 14,
+            "table": 19,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         },
         {
             "id": 1,
-            "table#": 12,
-            "doc#": 14,
+            "table": 19,
+            "doc": 14,
             "quantity": 2,
-            "itemName": "Hamburger",
-            "received": "12-03-2022T00:00:00",
-            "modifiers": [{
-                    "name": "beacon"
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "table": 19,
+            "doc": 14,
+            "quantity": 2,
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "table": 19,
+            "doc": 14,
+            "quantity": 2,
+            "items":[
+                {
+                    "itemName": "Hamburger",
+                    "received": "12-03-2022T00:00:00",
+                    "modifiers": [{
+                        "name": "beacon"
+                    }]
                 }
             ]
         }

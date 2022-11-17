@@ -1,18 +1,25 @@
-import Card from '../Card/Card'
+import { useEffect, useState } from 'react';
+import Card from '../Card/Card';
+import data from '../../dataFile.json'
 
 function CardView(){
+
+    const[cardItems, setCardItems] = useState();
+
+    useEffect(() => {
+        setCardItems(data.tables)
+    }, [data.tables])
+
     return(
         <div>
             <div>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                {cardItems && cardItems.map((tableItem, index) =>
+                    (
+                        <div className='row'>
+                            <Card key={index} tableItem={tableItem}></Card>
+                        </div>
+                    )
+                )}
             </div>
         </div>
     );
