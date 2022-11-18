@@ -16,7 +16,9 @@ function App() {
     setServiceIP(localStorage.getItem('serviceIP'))
   }, []);
 
-  if(terminalID !== null && isChit !== null && serviceIP !== null){
+  if(( terminalID !== undefined && terminalID !== null) &&
+     (isChit !== undefined && isChit !== null) && 
+     (serviceIP !== undefined && serviceIP !== null)){
     if(isChit === 'true'){
       return(
         <CardView></CardView>

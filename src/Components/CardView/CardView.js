@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
-import data from '../../dataFile.json'
+import data from '../../chit.json'
+import '../CardView/CardView.css'
 
 function CardView(){
 
     const[cardItems, setCardItems] = useState();
 
     useEffect(() => {
-        setCardItems(data.tables)
-    }, [data.tables])
+        setCardItems(data)
+    }, [data])
 
     return(
         <div>
-            <div>
+            <div className='cardList'>
                 {cardItems && cardItems.map((tableItem, index) =>
                     (
-                        <div className='row'>
+                        <div className="item">
                             <Card key={index} tableItem={tableItem}></Card>
                         </div>
                     )

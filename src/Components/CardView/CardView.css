@@ -1,0 +1,18 @@
+.cardList {
+    background: white;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto; 
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  
+  .item {
+    box-shadow: 1px 1px 1px 1px #c2c2c2;
+    border-radius: 5px;
+    background: white;
+    flex: 1 0 25%; /* explanation below */
+    margin: 5px;
+    padding: 10px;
+    height: 300px;
+    align-self: center;
+  }

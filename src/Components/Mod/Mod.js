@@ -1,7 +1,9 @@
-function Mod(){
+import '../Mod/Mod.css'
+
+function Mod(props){
     return(
-        <div>
-            Mod
+        <div className='modifierName'>
+            {props.modifier.name}
         </div>
     );
 }
