@@ -1,0 +1,18 @@
+.doc{
+    text-align: start;
+}
+
+.table{
+    text-align: end;
+}
+
+.textAttributes{
+    font-size: large;
+    font-weight: bolder;
+}
+
+.itemList{
+    height:215px;
+    width: 100%;
+    overflow:auto;
+}

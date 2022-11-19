@@ -1,0 +1,78 @@
+[
+	{
+		"id": 1, 
+		"docnumber": "CS000001", 
+		"received": "18.11.2022 14:22", 
+		"tableno": 1, 
+		"qty": 2, 
+		"name": "item #1",
+		"modifiers": 
+		[
+			{
+				"name": "    + mod #1", 
+				"qty": 1
+			}, 
+			{
+				"name": "    No mod #2", 
+				"qty": 1
+			}
+		]
+	},
+	{
+		"id": 2, 
+		"docnumber": "CS000001", 
+		"received": "18.11.2022 14:22", 
+		"tableno": 1, 
+		"qty": 2, 
+		"name": "item #2",
+		"modifiers": 
+		[
+			{
+				"name": "    + mod #2", 
+				"qty": 1
+			}, 
+			{
+				"name": "    No mod #1", 
+				"qty": 1
+			}
+		]
+	},
+	{
+		"id": 3, 
+		"docnumber": "CS000002", 
+		"received": "18.11.2022 14:25", 
+		"tableno": 2, 
+		"qty": 1, 
+		"name": "item #1",
+		"modifiers": 
+		[
+			{
+				"name": "    + mod #1", 
+				"qty": 1
+			}, 
+			{
+				"name": "    No mod #2", 
+				"qty": 1
+			}
+		]
+	},
+	{
+		"id": 4, 
+		"docnumber": "CS000002", 
+		"received": "18.11.2022 14:25", 
+		"tableno": 2, 
+		"qty": 1, 
+		"name": "item #2",
+		"modifiers": 
+		[
+			{
+				"name": "    + mod #2", 
+				"qty": 1
+			}, 
+			{
+				"name": "    No mod #1", 
+				"qty": 1
+			}
+		]
+	}
+]
