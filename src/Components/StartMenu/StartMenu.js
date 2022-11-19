@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
 import '..//StartMenu//StartMenu.css'
 
 function StartMenu(){
+
+    useEffect(() => {
+
+    },[])
+
     return(<div className="startMenuMain">
             <div className="inputMenuItem">
                 <label>Terminal ID</label>
