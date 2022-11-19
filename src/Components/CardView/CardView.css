@@ -7,7 +7,7 @@
   }
   
   .item {
-    box-shadow: 1px 1px 1px 1px #c2c2c2;
+    box-shadow: 1px 1px 1px 1px rgb(136, 136, 136);
     border-radius: 5px;
     background: white;
     flex: 1 0 25%; /* explanation below */

@@ -6,3 +6,13 @@ export const UPDATE_TABLE_VIEW = "UPDATE_TABLE_VIEW";
 export const CARD_BUMP_ITEM = "CARD_BUMP_ITEM";
 export const CARD_VIEW = "CARD_VIEW";
 export const UPDATE_CARD_VIEW = "UPDATE_CARD_VIEW";
+//Other constants
+export const rowHeader = {
+    id: "ID", 
+    docnumber: "Document number", 
+    received: "Received time", 
+    tableno: "Table number", 
+    qty: "Quantity", 
+    name: "Item name",
+    modifiers:"Modifiers" 
+}

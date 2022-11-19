@@ -5,9 +5,9 @@ import '..//StartMenu//StartMenu.css'
 function StartMenu(){
 
     useEffect(() => {
-
+        
     },[])
-    
+
     const [terminalID, setTerminalID] = useState();
     const [isChit, setIsChit] = useState();
     const [serviceIP, setServiceIP] = useState();

@@ -1,0 +1,9 @@
+.mainRow{
+    align-items: center;
+    margin: 5px;
+}
+.bump{
+    height: 45px;
+    padding: 10px;
+    border-radius: 5px;
+}
