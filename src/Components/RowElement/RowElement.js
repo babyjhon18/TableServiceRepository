@@ -3,6 +3,17 @@ import TableModifier from '../TableModifiers/TableModifier';
 
 
 function RowElement(props){
+
+    function bumpCard(event){
+        removeObjectWithId(event.target.value);
+    }
+
+    function removeObjectWithId(id) {
+        // const objWithIdIndex = chitList.findIndex((obj) => obj.docnumber === id);
+        // chitList.splice(objWithIdIndex, 1);
+        console.log(id);
+    }
+
     if(props.NotHeader){
         return(
             <div className="mainRow row">
@@ -57,7 +68,7 @@ function RowElement(props){
                 <div className="col-lg">
                     {props.tableItem.received}
                 </div>
-                <button className="col-lg bump">Bump</button>            
+                <button className="col-lg bump"  onClick={(event) => bumpCard(event)} value={props.tableItem.id}>Bump</button>            
             </div>
         );
     }

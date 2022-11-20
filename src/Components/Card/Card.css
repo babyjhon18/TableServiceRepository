@@ -1,18 +1,45 @@
 .doc{
+    margin: 5px;
     text-align: start;
-}
-
-.table{
-    text-align: end;
-}
-
-.textAttributes{
-    font-size: large;
+    color: white;
+    font-size: medium;
     font-weight: bolder;
 }
 
+.tabl{
+    margin: 10px;
+    text-align: start;
+    color: white;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.rec{
+  color: black;  
+  margin-left: 10%;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.mainHeader{
+    border-radius: 5px 5px 0px 0px;
+    background-color: green;
+    border-bottom: 3px solid rgb(237, 241, 2);
+}
+
+.Header{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
 .itemList{
-    height:215px;
+    height:230px;
     width: 100%;
     overflow:auto;
+}
+
+.bump{
+    border-radius: 5px;
+    margin: 5px;
 }

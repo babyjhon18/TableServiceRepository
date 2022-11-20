@@ -33,20 +33,26 @@ function StartMenu(){
         localStorage.setItem('serviceIP', serviceIP);
     }
 
-    return(<div className="startMenuMain">
-            <div className="inputMenuItem">
-                <label>Terminal ID</label>
-                <input name='terminal' type={"text"} placeholder="Enter terminal ID" onChange={handleChangeInput}></input>
+    return(<div className="startMenu"> 
+            <div className="row rowMain">
+                <span className='col-lg'>Terminal ID</span>
+                <div className='col-lg'>
+                    <input className='col-lg' name='terminal' type={"text"} placeholder="Enter terminal ID" onChange={handleChangeInput}></input>
+                </div>
             </div>
-            <div className="inputMenuItem">
-                <label>Is chit</label>
-                <input name='chit' type={"checkbox"} onChange={handleChangeInput}></input>
+            <div className="row rowMain">
+                <label className='col-lg'>Is chit</label>
+                <div className='col-lg'>
+                    <input name='chit' type={"checkbox"} onChange={handleChangeInput}></input>
+                </div>
             </div>
-            <div className="inputMenuItem">
-                <label>Service IP</label>
-                <input name='serviceIP' type={"text"} placeholder="Enter server IP" onChange={handleChangeInput}></input>
+            <div className="row rowMain">
+                <span className='col-lg'>Service IP</span>
+                <div className='col-lg'>
+                    <input name='serviceIP' type={"text"} placeholder="Enter server IP" onChange={handleChangeInput}></input>
+                </div>
             </div>
-            <div>
+            <div className='col-lg'>
                 <button onClick={saveButtonClick}>Save</button>
             </div>
         </div>
