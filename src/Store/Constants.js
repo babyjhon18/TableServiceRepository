@@ -9,10 +9,16 @@ export const UPDATE_CARD_VIEW = "UPDATE_CARD_VIEW";
 //Other constants
 export const rowHeader = {
     id: "ID", 
-    docnumber: "Document number", 
+    docnumber: "Document#", 
     received: "Received time", 
-    tableno: "Table number", 
+    tableno: "Table#", 
     qty: "Quantity", 
     name: "Item name",
     modifiers:"Modifiers" 
 }
+//links
+export const SERVER = "server:port";
+export const PREPARATION_UPDATE = "/preparation/update?terminalcode=";
+export const PREPARATION_BUMP = "/preparation/update?id=";
+export const CHIT_UPDATE = "/chit/update?terminalcode=";
+export const CHIT_BUMP = "/chit/bump?docnumber=";

@@ -1,8 +1,11 @@
-import { CARD_VIEW, UPDATE_CARD_VIEW, CARD_BUMP_ITEM } from '../../Store/Constants'
+import { CARD_VIEW, UPDATE_CARD_VIEW, CARD_BUMP_ITEM } from '../Store/Constants'
 
-export function cardViewReduser(state, action){
+const initialState = {card:"card"}
+
+export function cardViewReduser(state = initialState, action){
     switch(action.type){
         case CARD_VIEW:{
+            state = action.payload;
             return state;
         }
         case UPDATE_CARD_VIEW:{
@@ -11,5 +14,7 @@ export function cardViewReduser(state, action){
         case CARD_BUMP_ITEM:{
             return state;
         }
+        default:
+            return state
     }
 }
