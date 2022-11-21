@@ -1,18 +1,20 @@
 import Item from "../Item/Item";
 import '../Card/Card.css';
-import chitList from '../../chit.json';
+import { useDispatch, useSelector } from "react-redux";
+import { UPDATE_CARD_VIEW } from "../../Store/Constants";
 
 function Card(props){
+
+    const cards = useSelector(state => state.cardViewReduser);
+    const dispatch = useDispatch(); 
 
     function bumpCard(event){
         removeObjectWithId(event.target.value);
     }
 
     function removeObjectWithId(id) {
-        // const objWithIdIndex = chitList.findIndex((obj) => obj.docnumber === id);
-        // chitList.splice(objWithIdIndex, 1);
-        console.log(id);
-      }
+        dispatch({type: UPDATE_CARD_VIEW, payload: id})
+    }
 
     return(
         <div>

@@ -9,6 +9,8 @@ export function cardViewReduser(state = initialState, action){
             return state;
         }
         case UPDATE_CARD_VIEW:{
+            console.log(action.payload)
+            console.log(state);
             return state;
         }
         case CARD_BUMP_ITEM:{
