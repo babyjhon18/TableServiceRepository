@@ -47,9 +47,9 @@ function StartMenu(){
                 </div>
             </div>
             <div className="row rowMain">
-                <span className='col-lg'>Service IP</span>
+                <span className='col-lg'>Service IP & PORT</span>
                 <div className='col-lg'>
-                    <input name='serviceIP' type={"text"} placeholder="Enter server IP" onChange={handleChangeInput}></input>
+                    <input name='serviceIP' type={"text"} placeholder="Enter server IP and Port" onChange={handleChangeInput}></input>
                 </div>
             </div>
             <div className='col-lg'>

@@ -2,26 +2,35 @@
     margin: 5px;
     text-align: start;
     color: white;
-    font-size: medium;
+    font-size: small;
     font-weight: bolder;
+}
+
+.docValue{
+    font-weight: normal;
 }
 
 .tabl{
     margin: 10px;
     text-align: start;
     color: white;
-    font-size: medium;
+    font-size: small;
     font-weight: bolder;
+}
+
+.tablValue{
+    font-weight: normal;
 }
 
 .rec{
   color: black;  
   margin-left: 10%;
-  font-size: medium;
+  font-size: small;
   font-weight: bolder;
 }
 
 .mainHeader{
+    padding: 0px;
     border-radius: 5px 5px 0px 0px;
     background-color: green;
     border-bottom: 3px solid rgb(237, 241, 2);
@@ -41,5 +50,11 @@
 
 .bump{
     border-radius: 5px;
+    padding: 5px;
     margin: 5px;
+    font-size: small;
+}
+
+.col-lg{
+    margin:2px;
 }

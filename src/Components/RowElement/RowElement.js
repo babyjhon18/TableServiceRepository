@@ -16,59 +16,61 @@ function RowElement(props){
 
     if(props.NotHeader){
         return(
-            <div className="mainRow row">
-                <div className="col-lg">
-                    {props.tableItem.id}
+            <div className="mainRow row col-lg-12">
+                <div className="col">
+                    {props.tableItem.pid}
                 </div>
-                <div className="col-lg">
+                <div className="col">
                     {props.tableItem.tableno}
                 </div>
-                <div className="col-lg">
+                <div className="col">
                     {props.tableItem.docnumber}
                 </div>
-                <div className="col-lg">
-                    {props.tableItem.qty}
-                </div>
-                <div className="col-lg">
-                    {props.tableItem.name}
-                </div>
-                <div className="col-lg">
-                    {props.tableItem.modifiers}
-                </div>
-                <div className="col-lg">
+                <div className="col">
                     {props.tableItem.received}
                 </div>
-                <div className="col-lg"></div>       
+                <div className="col">
+                    {props.tableItem.qty}
+                </div>
+                <div className="col-lg-3">
+                    {props.tableItem.name}
+                </div>
+                <div className="col-lg-3">
+                    {props.tableItem.modifiers}
+                </div>
+                <div className="col"></div>
             </div>
         );
     }
     else{
         return(
-            <div className="mainRow row">
-                <div className="col-lg">
-                    {props.tableItem.id}
+            <div className="mainRow row col-lg-12">
+                <div className="col">
+                    {props.tableItem.pid}
                 </div>
-                <div className="col-lg">
+                <div className="col">
                     {props.tableItem.tableno}
                 </div>
-                <div className="col-lg">
+                <div className="col">
                     {props.tableItem.docnumber}
                 </div>
-                <div className="col-lg">
+                <div className="col">
+                    {props.tableItem.received}
+                </div>
+                <div className="col">
                     {props.tableItem.qty}
                 </div>
-                <div className="col-lg">
+                <div className="col-lg-3">
                     {props.tableItem.name}
                 </div>
-                <div className="col-lg">
+                <div className="col-lg-3">
                     {props.tableItem.modifiers && props.tableItem.modifiers.map((item, index) => (
                         <TableModifier key={index} modifier={item}></TableModifier> 
                     ))}
                 </div>
-                <div className="col-lg">
-                    {props.tableItem.received}
-                </div>
-                <button className="col-lg bump"  onClick={(event) => bumpCard(event)} value={props.tableItem.id}>Bump</button>            
+                <div className="col bump">
+                    <button onClick={(event) => bumpCard(event)} value={props.tableItem.id}>Bump</button>
+                </div>    
             </div>
         );
     }

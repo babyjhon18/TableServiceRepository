@@ -20,9 +20,11 @@ function Card(props){
         <div>
             <div className="mainHeader">
                 <div className="Header">
-                    <div className="col-lg doc">Doc#{props.tableItem.docnumber}</div>
-                    <div className="col-lg tabl">Table#{props.tableItem.tableno}</div>
-                    <button className="col-lg bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button>
+                    <div className="col doc">Doc#:<br />
+                    <div className="docValue">{props.tableItem.docnumber}</div></div>
+                    <div className="col tabl">Table#:<br />
+                    <div className="tablValue">{props.tableItem.tableno}</div></div>
+                    <button className="col bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button>
                 </div>
             </div>
             <div>

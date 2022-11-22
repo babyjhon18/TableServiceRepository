@@ -4,8 +4,13 @@ import '../Item/Item.css'
 function Item(props){
     return(
         <div>
-            <div className="itemName">
-                {props.item.name}
+            <div className="main">
+                <div className="itemName">
+                    {props.item.pid}. {props.item.name} 
+                </div>
+                <div className="itemQty">
+                    Qty: {props.item.qty}
+                </div>
             </div>
             <div>
                 {

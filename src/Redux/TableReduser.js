@@ -5,6 +5,7 @@ const initialState = {table:"table"}
 export function tableViewReduser(state = initialState, action){
     switch(action.type){
         case TABLE_VIEW:{
+            state = action.payload;
             return state;
         }
         case UPDATE_TABLE_VIEW:{

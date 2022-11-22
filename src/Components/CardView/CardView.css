@@ -1,7 +1,7 @@
 .cardList {
   background: white;
   display: grid;
-  grid-template-columns: auto auto auto auto auto; 
+  grid-template-columns: 260px 260px 260px 260px 260px; 
   grid-gap: 10px;
   padding: 5px;
 }

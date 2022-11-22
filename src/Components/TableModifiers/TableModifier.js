@@ -4,7 +4,7 @@ function TableModifier(props){
     return(
         <div className="mainDivMod row">
         <div className="col-lg">
-            {props.modifier.name} - {props.modifier.qty}
+           {props.modifier.name}  {/* - {props.modifier.qty} */}
         </div>
     </div>
     );
