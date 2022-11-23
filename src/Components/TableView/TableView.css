@@ -3,16 +3,20 @@
     background-color: rgb(57, 99, 85);
     position: sticky;
     top: 0;
+    left: 5px;
+    right: 5px;
     padding: 5px;
     font-weight: bold;
+    font-size: smaller;
 }
 .rowElements{
+    font-size: small;
     margin:0px;
 }
 .element{
     border-radius: 0px;
     margin: 5px;
-    padding-left: 7px;
+    padding-left: 5px;
     box-shadow: 1px 1px 1px 1px rgb(136, 136, 136);
 }
 .element:hover{

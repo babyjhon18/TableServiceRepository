@@ -4,14 +4,25 @@ import '../Item/Item.css'
 function Item(props){
     return(
         <div>
-            <div className="main">
-                <div className="itemName">
-                    {props.item.pid}. {props.item.name} 
+            {props.item.status === 2 ? 
+                <div className="mainReady">
+                    <div className="itemName">
+                        {props.item.pid}. {props.item.name} 
+                    </div>
+                    <div className="itemQty">
+                        Qty: {props.item.qty}
+                    </div>
                 </div>
-                <div className="itemQty">
-                    Qty: {props.item.qty}
+                :
+                <div className="mainNotReady">
+                    <div className="itemName">
+                        {props.item.pid}. {props.item.name} 
+                    </div>
+                    <div className="itemQty">
+                        Qty: {props.item.qty}
+                    </div>
                 </div>
-            </div>
+            }
             <div>
                 {
                     props.item.modifiers && props.item.modifiers.map((modifier, index) => (

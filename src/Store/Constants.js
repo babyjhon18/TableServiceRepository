@@ -20,6 +20,6 @@ export const rowHeader = {
 }
 //links
 export const PREPARATION_UPDATE = "/preparation/update?terminalcode=";
-export const PREPARATION_BUMP = "/preparation/update?id=";
+export const PREPARATION_BUMP = "/preparation/bump?id=";
 export const CHIT_UPDATE = "/chit/update?terminalcode=";
 export const CHIT_BUMP = "/chit/bump?docnumber=";

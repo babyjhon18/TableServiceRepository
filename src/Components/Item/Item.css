@@ -8,17 +8,30 @@
     text-align: end;
 }
 
-.main{
+.mainReady{
     display: flex;
     flex-direction: column-reverse;
     font-size: small;
     font-weight: bold;
-    border-bottom: 2px solid rgb(23, 90, 90);
+    background-color: rgb(160, 233, 160);
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.mainNotReady{
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: small;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 @media (min-width: 260px) {
-    .main {
+    .mainNotReady {
       flex-direction: row;
       justify-content: space-between;
+    }
+    .mainReady{
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

@@ -1,7 +1,7 @@
 import Item from "../Item/Item";
 import '../Card/Card.css';
 import { useDispatch, useSelector } from "react-redux";
-import { UPDATE_CARD_VIEW } from "../../Store/Constants";
+import { CARD_BUMP_ITEM, UPDATE_CARD_VIEW } from "../../Store/Constants";
 
 function Card(props){
 
@@ -12,8 +12,9 @@ function Card(props){
         removeObjectWithId(event.target.value);
     }
 
-    function removeObjectWithId(id) {
-        dispatch({type: UPDATE_CARD_VIEW, payload: id})
+    function removeObjectWithId(docnumber) {
+        
+        dispatch({type: CARD_BUMP_ITEM, payload: docnumber});
     }
 
     return(
@@ -24,7 +25,14 @@ function Card(props){
                     <div className="docValue">{props.tableItem.docnumber}</div></div>
                     <div className="col tabl">Table#:<br />
                     <div className="tablValue">{props.tableItem.tableno}</div></div>
-                    <button className="col bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button>
+                    {
+                        props.tableItem.items.every(item => {
+                            return item.status === 2;
+                        }) 
+                        ? <button className="col bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button> 
+                        : <div className="col"></div>
+                    }
+                    
                 </div>
             </div>
             <div>
