@@ -8,15 +8,18 @@ function RowElement(props){
 
     const dispatch = useDispatch();
 
-    function bumpCard(event){
-        removeObjectWithId(event.target.value);
+    function bumpCard(event, value){
+        removeObjectWithId(event.target.value, value);
     }
 
-    function removeObjectWithId(id) {
-        console.log(id);
-        fetch("http://" + localStorage.getItem('serviceIP') + PREPARATION_BUMP + id)
+    function removeObjectWithId(value, valueOfRow) {
+        console.log(valueOfRow.id);
+        console.log(valueOfRow.docnumber);
+        console.log(valueOfRow.pid);
+        fetch("http://" + localStorage.getItem('serviceIP') + PREPARATION_BUMP +
+        valueOfRow.pid + "&docnumber=" + valueOfRow.docnumber + "&id=" + valueOfRow.id)
         .then(result => {
-            dispatch({type: TABLE_BUMP_ITEM, payload: id})
+            dispatch({type: TABLE_BUMP_ITEM, payload: valueOfRow.id})
         });
     }
 
@@ -75,7 +78,7 @@ function RowElement(props){
                     ))}
                 </div>
                 <div className="col bump">
-                    <button onClick={(event) => bumpCard(event)} value={props.tableItem.id}>Bump</button>
+                    <button onClick={(event) => bumpCard(event, props.tableItem)} value={props.tableItem}>Bump</button>
                 </div>    
             </div>
         );

@@ -5,8 +5,8 @@ import '..//StartMenu//StartMenu.css'
 function StartMenu(){
 
     useEffect(() => {
-        
-    },[])
+        setIsChit(false);
+    })
 
     const [terminalID, setTerminalID] = useState();
     const [isChit, setIsChit] = useState();
@@ -31,6 +31,7 @@ function StartMenu(){
         localStorage.setItem('terminalID', terminalID);
         localStorage.setItem('isChit', isChit);
         localStorage.setItem('serviceIP', serviceIP);
+        window.location.reload(false);
     }
 
     return(<div className="startMenu"> 
