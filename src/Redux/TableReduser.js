@@ -1,7 +1,10 @@
 import {TABLE_VIEW, UPDATE_TABLE_VIEW, TABLE_BUMP_ITEM} from '../Store/Constants'
 
 const initialState = {
-    table: []
+    table: [],
+    totalItems: 0,
+    currentPage: 0, 
+    countOfPages: 0,
 }
 
 export function tableViewReduser(state = initialState, action){

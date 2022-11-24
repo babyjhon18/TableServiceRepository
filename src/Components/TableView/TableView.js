@@ -33,7 +33,7 @@ function TableView(){
     }, [table])
 
     return(
-        <div className="mainTable container-fluid">
+        <div className="container-fluid">
             <div className="rowHeader row">
                 <RowElement tableItem={rowHeader} NotHeader={true}></RowElement>
             </div>
