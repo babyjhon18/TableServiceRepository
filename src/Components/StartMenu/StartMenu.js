@@ -31,7 +31,7 @@ function StartMenu(){
         localStorage.setItem('terminalID', terminalID);
         localStorage.setItem('isChit', isChit);
         localStorage.setItem('serviceIP', serviceIP);
-        //window.location.reload(false);
+        window.location.reload(false);
     }
 
     return(<div className="startMenu"> 
