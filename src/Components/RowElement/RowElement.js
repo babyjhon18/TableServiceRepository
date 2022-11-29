@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux';
 import { TABLE_BUMP_ITEM, PREPARATION_BUMP } from '../../Store/Constants';
 import '../RowElement/RowElement.css'
 import TableModifier from '../TableModifiers/TableModifier';
-import Pagination from "../Pagination/Pagination";
 
 function RowElement(props){
 
@@ -25,7 +24,6 @@ function RowElement(props){
 
     if(props.NotHeader){
         return(<div>
-                <Pagination></Pagination>
                 <div className="mainRow row col-lg-12">
                     <div className="col-1">
                         {props.tableItem.pid}

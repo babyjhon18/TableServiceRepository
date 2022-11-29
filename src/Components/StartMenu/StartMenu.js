@@ -4,12 +4,8 @@ import '..//StartMenu//StartMenu.css'
 
 function StartMenu(){
 
-    useEffect(() => {
-        setIsChit(false);
-    })
-
     const [terminalID, setTerminalID] = useState();
-    const [isChit, setIsChit] = useState();
+    const [isChit, setIsChit] = useState(false);
     const [serviceIP, setServiceIP] = useState();
 
     const handleChangeInput = (event) => {
@@ -28,10 +24,14 @@ function StartMenu(){
     }
 
     const saveButtonClick = () => {
+        if(isChit == undefined){
+            setIsChit(false);
+            console.log(isChit);
+        }
         localStorage.setItem('terminalID', terminalID);
         localStorage.setItem('isChit', isChit);
         localStorage.setItem('serviceIP', serviceIP);
-        window.location.reload(false);
+        //window.location.reload(false);
     }
 
     return(<div className="startMenu"> 
