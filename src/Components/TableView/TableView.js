@@ -4,6 +4,7 @@ import { rowHeader } from '../../Store/Constants'
 import '../TableView/TableView.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { TABLE_VIEW, PREPARATION_UPDATE} from '../../Store/Constants'
+import InfoComponent from "../InfoComponent/InfoComponent";
 
 function TableView(){
 
@@ -34,6 +35,7 @@ function TableView(){
 
     return(
         <div className="container-fluid">
+            <InfoComponent name="table"></InfoComponent>
             <div className="rowHeader row">
                 <RowElement tableItem={rowHeader} NotHeader={true}></RowElement>
             </div>

@@ -18,7 +18,6 @@ export function cardViewReduser(state = initialState, action){
             console.log(card);
             if(card){
                 const item = card.items.find(item => item.id === action.payload.id);
-                console.log(item);
                 if(item){
                     item.status = action.payload.itemStatus;
                 }

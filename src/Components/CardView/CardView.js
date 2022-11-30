@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import '../CardView/CardView.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { ADD_CARD, CHIT_UPDATE, UPDATE_CARD_VIEW} from '../../Store/Constants'
+import InfoComponent from '../InfoComponent/InfoComponent';
 
 function CardView(){
 
@@ -45,7 +46,8 @@ function CardView(){
     }, [cards])
 
     return(
-        <div>
+        <div className='container-fluid'>
+            <InfoComponent name="card"></InfoComponent>
             <div className='cardList'>
                 {cards.cards && cards.cards.map((tableItem, index) =>
                     (

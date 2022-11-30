@@ -7,6 +7,8 @@ export const CARD_BUMP_ITEM = "CARD_BUMP_ITEM";
 export const CARD_VIEW = "CARD_VIEW";
 export const UPDATE_CARD_VIEW = "UPDATE_CARD_VIEW";
 export const ADD_CARD = "ADD_CARD";
+//Login actions
+export const LOG_IN = "LOG_IN";
 //Other constants
 export const rowHeader = {
     pid: "ID#",
@@ -23,3 +25,4 @@ export const PREPARATION_UPDATE = "/preparation/update?terminalcode=";
 export const PREPARATION_BUMP = "/preparation/bump?pid=";
 export const CHIT_UPDATE = "/chit/update?terminalcode=";
 export const CHIT_BUMP = "/chit/bump?docnumber=";
+export const LOGIN = "/login?terminalcode=";

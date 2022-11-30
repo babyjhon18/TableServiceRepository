@@ -13,7 +13,6 @@ function Card(props){
     }
 
     function removeObjectWithId(docnumber) {
-        
         dispatch({type: CARD_BUMP_ITEM, payload: docnumber});
     }
 
@@ -25,14 +24,14 @@ function Card(props){
                     <div className="docValue">{props.tableItem.docnumber}</div></div>
                     <div className="col tabl">Table#:<br />
                     <div className="tablValue">{props.tableItem.tableno}</div></div>
-                    {
+                    {/* {
                         props.tableItem.items.every(item => {
                             return item.status === 2;
                         }) 
                         ? <button className="col bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button> 
                         : <div className="col"></div>
-                    }
-                    
+                    } */}
+                    <button className="col bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button>
                 </div>
             </div>
             <div>
