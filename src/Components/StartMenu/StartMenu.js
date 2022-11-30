@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
 import { useState } from 'react';
 import '..//StartMenu//StartMenu.css'
 import { LOGIN, LOG_IN } from '../../Store/Constants'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 function StartMenu(){
 
+    const login = useSelector(state => state.loginReduser)
     const dispatch = useDispatch();
     const [terminalID, setTerminalID] = useState();
     const [serviceIP, setServiceIP] = useState();
@@ -28,9 +28,8 @@ function StartMenu(){
         fetch("http://" + serviceIP + LOGIN + terminalID)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
             dispatch({type: LOG_IN, payload: { 
-                isChit: result.ischit, terminalDescription: result.description, terminalID: result.id
+                isChit: result.ischit, terminalDescription: result.description, terminalID: result.id, serviceIP: serviceIP
             }});
         });
         window.location.reload(false);
@@ -46,7 +45,7 @@ function StartMenu(){
             <div className="row rowMain">
                 <span className='col-lg'>Service IP & PORT</span>
                 <div className='col-lg'>
-                    <input name='serviceIP' type={"text"} placeholder="Enter server IP and Port" onChange={handleChangeInput}></input>
+                    <input className='col-lg' name='serviceIP' type={"text"} placeholder="Enter server IP and Port" onChange={handleChangeInput}></input>
                 </div>
             </div>
             <div className='row rowMain'>

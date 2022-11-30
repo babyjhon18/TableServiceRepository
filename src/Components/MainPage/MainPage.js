@@ -16,14 +16,14 @@ function MainPage(){
             .then(response => response.json())
             .then(result => {
                 dispatch({type: LOG_IN, payload: { 
-                    isChit: result.ischit, terminalDescription: result.description, terminalID: result.id
+                    isChit: result.ischit, terminalDescription: result.description, terminalID: result.id, serviceIP: localStorage.getItem("serviceIP")
                 }})
             });
         }
     }, [login])
 
     if((login.serviceIP !== undefined && login.serviceIP !== null) && 
-    (login.serviceIP !== undefined && login.serviceIP !== null)){
+    (login.terminalID !== undefined && login.terminalID !== null)){
         if(login.isChit !== undefined){
             if(login.isChit){
                 return <CardView></CardView>

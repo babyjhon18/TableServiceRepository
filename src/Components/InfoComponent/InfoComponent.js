@@ -1,24 +1,26 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import '../InfoComponent/InfoComponent.css'
-import { TABLE_VIEW, PREPARATION_UPDATE, ADD_CARD, CHIT_UPDATE, UPDATE_CARD_VIEW} from '../../Store/Constants'
+import { TABLE_VIEW, PREPARATION_UPDATE, ADD_CARD, CHIT_UPDATE, UPDATE_CARD_VIEW, LOG_IN} from '../../Store/Constants'
 
 function InfoComponent(props){
 
     const [dateTime, setDateTime] = useState();
     const dispatch = useDispatch();
-    const login = useSelector(state => state.loginReduser)
+    const login = useSelector(state => state.loginReduser);
 
     useEffect(() => {
-        setDateTime(new Date().toLocaleTimeString());
+        let time = new Date().toLocaleTimeString({},{hour12: true});
+        setDateTime(time);
         setInterval(() => {
-            setDateTime(new Date().toLocaleTimeString());
+            let time = new Date().toLocaleTimeString({},{hour12: true});
+            setDateTime(time);
         }, 1000)
     }, [])
 
     const LogOut = () => {
+        window.location.reload();
         localStorage.clear();
-        window.location.reload(false);
     }
 
     const Refresh = () => {
