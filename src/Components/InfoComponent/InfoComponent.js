@@ -10,10 +10,10 @@ function InfoComponent(props){
     const login = useSelector(state => state.loginReduser);
 
     useEffect(() => {
-        let time = new Date().toLocaleTimeString({},{hour12: true});
+        let time = new Date().toLocaleTimeString({},{hour12: false});
         setDateTime(time);
         setInterval(() => {
-            let time = new Date().toLocaleTimeString({},{hour12: true});
+            let time = new Date().toLocaleTimeString({},{hour12: false});
             setDateTime(time);
         }, 1000)
     }, [])
