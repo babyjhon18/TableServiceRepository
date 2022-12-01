@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import '../InfoComponent/InfoComponent.css'
-import { TABLE_VIEW, PREPARATION_UPDATE, ADD_CARD, CHIT_UPDATE, UPDATE_CARD_VIEW, LOG_IN} from '../../Store/Constants'
+import { TABLE_VIEW, PREPARATION_UPDATE, ADD_CARD, CHIT_UPDATE, UPDATE_CARD_VIEW, LOG_IN} from '../../Store/Constants';
 
 function InfoComponent(props){
 
@@ -26,7 +26,7 @@ function InfoComponent(props){
     const Refresh = () => {
         switch(props.name){
             case "table":{
-                fetch("http://" + localStorage.getItem('serviceIP') + PREPARATION_UPDATE + localStorage.getItem('terminalID'))
+                fetch("http://" + window.SERVER_IP + PREPARATION_UPDATE + login.terminalID)
                 .then(response => response.json())
                 .then(result => {
                     dispatch({type: TABLE_VIEW, payload: result});
@@ -34,7 +34,7 @@ function InfoComponent(props){
                 break;
             }
             case "card":{
-                fetch("http://" + localStorage.getItem('serviceIP') + CHIT_UPDATE + localStorage.getItem('terminalID'))
+                fetch("http://" + window.SERVER_IP + CHIT_UPDATE + login.terminalID)
                 .then(response => response.json())
                 .then(result => {
                     if (result.length > 0){

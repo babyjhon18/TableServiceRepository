@@ -11,7 +11,7 @@
 .mainReady{
     display: flex;
     flex-direction: column-reverse;
-    font-size: small;
+    font-size: 11px;
     font-weight: bold;
     background-color: rgb(160, 233, 160);
     border-bottom: 2px solid rgb(0, 0, 0);
@@ -20,12 +20,12 @@
 .mainNotReady{
     display: flex;
     flex-direction: column-reverse;
-    font-size: small;
+    font-size: 11px;
     font-weight: bold;
     border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-@media (min-width: 260px) {
+@media (min-width: 250px) {
     .mainNotReady {
       flex-direction: row;
       justify-content: space-between;

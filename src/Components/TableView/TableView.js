@@ -11,12 +11,13 @@ function TableView(){
     const [firstStart, setFirstStart] = useState(true);
     const dispatch = useDispatch();
     const table = useSelector(state => state.tableViewReduser);
+    const login = useSelector(state => state.loginReduser)
 
     function fetchData(){
         if(firstStart){
             setFirstStart(false);
         };
-        fetch("http://" + localStorage.getItem('serviceIP') + PREPARATION_UPDATE + localStorage.getItem('terminalID'))
+        fetch("http://" + window.SERVER_IP + PREPARATION_UPDATE + login.terminalID)
         .then(response => response.json())
         .then(result => {
             dispatch({type: TABLE_VIEW, payload: result});

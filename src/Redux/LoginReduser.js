@@ -1,10 +1,10 @@
-import { LOG_IN } from '../Store/Constants'
+import { LOG_IN } from '../Store/Constants';
 
 const initialState = {
     isChit: undefined,
     terminalDescription: "",
-    serviceIP: localStorage.getItem('serviceIP'),
-    terminalID: localStorage.getItem('terminalID'),
+    serviceIP: "",
+    terminalID: 0,
 }
 
 export function loginReduser(state = initialState, action){

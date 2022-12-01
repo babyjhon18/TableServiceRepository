@@ -15,7 +15,7 @@ function RowElement(props){
         console.log(valueOfRow.id);
         console.log(valueOfRow.docnumber);
         console.log(valueOfRow.pid);
-        fetch("http://" + localStorage.getItem('serviceIP') + PREPARATION_BUMP +
+        fetch("http://" + window.SERVER_IP + PREPARATION_BUMP +
         valueOfRow.pid + "&docnumber=" + valueOfRow.docnumber + "&id=" + valueOfRow.id)
         .then(result => {
             dispatch({type: TABLE_BUMP_ITEM, payload: valueOfRow.id})

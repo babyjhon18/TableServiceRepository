@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import TableView from '../TableView/TableView';
 import CardView from '../CardView/CardView';    
 import StartMenu from '../StartMenu/StartMenu';    
-import {LOG_IN, LOGIN} from '../../Store/Constants'
+import {LOG_IN, LOGIN} from '../../Store/Constants';
 
 function MainPage(){
 
@@ -12,15 +12,17 @@ function MainPage(){
     
     useEffect(() => {
         if(login.isChit === undefined){
-            fetch("http://" + login.serviceIP + LOGIN + login.terminalID)
+            fetch("http://" + window.SERVER_IP + LOGIN + login.terminalID)
             .then(response => response.json())
             .then(result => {
-                dispatch({type: LOG_IN, payload: { 
-                    isChit: result.ischit, terminalDescription: result.description, terminalID: result.id, serviceIP: localStorage.getItem("serviceIP")
-                }})
+                if(result !== []){
+                    dispatch({type: LOG_IN, payload: { 
+                        isChit: result.ischit, terminalDescription: result.description, terminalID: result.id, serviceIP: window.SERVER_IP
+                    }})
+                }
             });
         }
-    }, [login])
+    }, [])
 
     if((login.serviceIP !== undefined && login.serviceIP !== null) && 
     (login.terminalID !== undefined && login.terminalID !== null)){

@@ -10,12 +10,13 @@ function CardView(){
     const [firstStart, setFirstStart] = useState(true);
     const dispatch = useDispatch();
     const cards = useSelector(state => state.cardViewReduser);
+    const login = useSelector(state => state.loginReduser);
 
     function fetchData(){
         if(firstStart){
             setFirstStart(false);
         };
-        fetch("http://" + localStorage.getItem('serviceIP') + CHIT_UPDATE + localStorage.getItem('terminalID'))
+        fetch("http://" + window.SERVER_IP + CHIT_UPDATE + login.terminalID)
         .then(response => response.json())
         .then(result => {
             if (result.length > 0){
