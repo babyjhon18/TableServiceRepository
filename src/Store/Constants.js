@@ -26,3 +26,5 @@ export const PREPARATION_BUMP = "/preparation/bump?pid=";
 export const CHIT_UPDATE = "/chit/update?terminalcode=";
 export const CHIT_BUMP = "/chit/bump?docnumber=";
 export const LOGIN = "/login?terminalcode=";
+export const CHIT_RECALL = "/chit/recall?terminalcode=";
+export const PREPARATION_RECALL = "/preparation/recall?terminalcode=";

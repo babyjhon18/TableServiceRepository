@@ -1,4 +1,4 @@
-import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM, ADD_CARD } from '../Store/Constants'
+import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM } from '../Store/Constants'
 
 const initialState = {
     cards: []
@@ -6,21 +6,27 @@ const initialState = {
 
 export function cardViewReduser(state = initialState, action){
     switch(action.type){
-        case ADD_CARD:{
-            return { 
-                ...state,
-                cards: [...state.cards, action.payload] 
-            }
-        }
         case UPDATE_CARD_VIEW:{
             const cards = [...state.cards];
-            const card = cards.find(card => card.docnumber === action.payload.docnumber);
-            console.log(card);
-            if(card){
-                const item = card.items.find(item => item.id === action.payload.id);
-                if(item){
-                    item.status = action.payload.itemStatus;
+            const existedcard = cards.find(card => card.docnumber === action.payload.docnumber);
+            if(existedcard == undefined){
+                return {
+                    ...state,
+                    cards: [...state.cards, action.payload] 
                 }
+            }
+            else{
+                const newItems = [];
+                action.payload.items.map((newitem) => {
+                    let Index = existedcard.items.findIndex((item) => newitem.id === item.id);
+                    if(Index >= 0){
+                        existedcard.items[Index] = newitem;
+                    }
+                    else{
+                        newItems.push(newitem);
+                    }
+                });  
+                existedcard.items.push(...newItems);
             }
             return{
                 ...state,

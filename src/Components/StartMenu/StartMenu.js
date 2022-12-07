@@ -43,7 +43,7 @@ function StartMenu(){
                         <option selected="" value="0"></option>
                         {
                             TerminalList.map((item, index) => (
-                                <option value={item.code}>{item.name}</option> 
+                                <option key={index} value={item.code}>{item.code} - {item.name}</option> 
                             ))
                         }
                     </select>

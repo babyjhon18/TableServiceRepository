@@ -25,19 +25,19 @@ function RowElement(props){
     if(props.NotHeader){
         return(<div>
                 <div className="mainRow row col-lg-12">
-                    <div className="col-1">
+                    <div className="col-lg-1">
                         {props.tableItem.pid}
                     </div>
-                    <div className="col-1">
+                    <div className="col-lg-1">
                         {props.tableItem.tableno}
                     </div>
-                    <div className="col-1">
+                    <div className="col-lg-1">
                         {props.tableItem.docnumber}
                     </div>
-                    <div className="col-1">
+                    <div className="col-lg-1">
                         {props.tableItem.received}
                     </div>
-                    <div className="col">
+                    <div className="col-lg-1">
                         {props.tableItem.qty}
                     </div>
                     <div className="col-lg-3">
@@ -54,23 +54,25 @@ function RowElement(props){
     else{
         return(
             <div className="mainRow row col-lg-12">
-                <div className="col-1">
+                <div className="col-lg-1">
                     {props.tableItem.pid}
                 </div>
-                <div className="col-1">
+                <div className="col-lg-1">
                     {props.tableItem.tableno}
                 </div>
-                <div className="col-1">
+                <div className="col-lg-1">
                     {props.tableItem.docnumber}
                 </div>
-                <div className="col-1">
+                <div className="col-lg-1">
                     {props.tableItem.received}
                 </div>
-                <div className="col">
+                <div className="col-lg-1">
                     {props.tableItem.qty}
                 </div>
                 <div className="col-lg-3 itemName">
                     {props.tableItem.name}
+                    <br></br>
+                    <div className='description'>{props.tableItem.description}</div>
                 </div>
                 <div className="col-lg-3">
                     {props.tableItem.modifiers && props.tableItem.modifiers.map((item, index) => (

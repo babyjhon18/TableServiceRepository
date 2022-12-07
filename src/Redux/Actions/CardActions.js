@@ -1,10 +1,4 @@
-import { CARD_VIEW, UPDATE_CARD_VIEW, CARD_BUMP_ITEM } from '../../Store/Constants'
-
-export function ViewCards(){
-    return {
-        type: CARD_VIEW,
-    }
-}
+import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM } from '../../Store/Constants'
 
 export function UpdateViewCards(){
     return {

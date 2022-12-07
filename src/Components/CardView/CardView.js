@@ -21,16 +21,7 @@ function CardView(){
         .then(result => {
             if (result.length > 0){
                 result.map((card) => {
-                    card.items.every(item => {
-                        if(item.status === 0){
-                            dispatch({type: ADD_CARD, payload: card});
-                        }
-                        else{
-                            dispatch({type: UPDATE_CARD_VIEW, payload: { 
-                                docnumber: card.docnumber, id: item.id, itemStatus: item.status  
-                            }});
-                        }
-                    })
+                    dispatch({type: UPDATE_CARD_VIEW, payload: card});
                 })
             }
         });
