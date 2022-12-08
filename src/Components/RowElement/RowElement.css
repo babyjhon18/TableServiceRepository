@@ -10,6 +10,10 @@
     font-weight: bold;
 }
 .description{
-    font-size: x-small;
+    font-size: small;
     font-weight: normal;
 }
+
+@media (min-width: 1000px) {
+}
+

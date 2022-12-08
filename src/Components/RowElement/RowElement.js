@@ -25,28 +25,28 @@ function RowElement(props){
     if(props.NotHeader){
         return(<div>
                 <div className="mainRow row col-lg-12">
-                    <div className="col-lg-1">
+                    <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                         {props.tableItem.pid}
                     </div>
-                    <div className="col-lg-1">
+                    <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                         {props.tableItem.tableno}
                     </div>
-                    <div className="col-lg-1">
+                    <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                         {props.tableItem.docnumber}
                     </div>
-                    <div className="col-lg-1">
+                    <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                         {props.tableItem.received}
                     </div>
-                    <div className="col-lg-1">
+                    <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                         {props.tableItem.qty}
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" style={{minWidth: "300px"}}>
                         {props.tableItem.name}
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" style={{minWidth: "300px"}}>
                         {props.tableItem.modifiers}
                     </div>
-                    <div className="col"></div>
+                    <div className="col" style={{minWidth: "100px"}}></div>
                 </div>
             </div>
         );
@@ -54,32 +54,32 @@ function RowElement(props){
     else{
         return(
             <div className="mainRow row col-lg-12">
-                <div className="col-lg-1">
+                <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                     {props.tableItem.pid}
                 </div>
-                <div className="col-lg-1">
+                <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                     {props.tableItem.tableno}
                 </div>
-                <div className="col-lg-1">
+                <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                     {props.tableItem.docnumber}
                 </div>
-                <div className="col-lg-1">
+                <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                     {props.tableItem.received}
                 </div>
-                <div className="col-lg-1">
+                <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                     {props.tableItem.qty}
                 </div>
-                <div className="col-lg-3 itemName">
+                <div className="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3 itemName" style={{minWidth: "300px"}}>
                     {props.tableItem.name}
                     <br></br>
                     <div className='description'>{props.tableItem.description}</div>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-md-3 col-sm-3 col-lg-3 col-xs-3 col-xl-3" style={{minWidth: "300px"}}>
                     {props.tableItem.modifiers && props.tableItem.modifiers.map((item, index) => (
                         <TableModifier key={index} modifier={item}></TableModifier> 
                     ))}
                 </div>
-                <div className="col bump">
+                <div className="col bump" style={{minWidth: "100px"}}>
                     <button onClick={(event) => bumpCard(event, props.tableItem)} value={props.tableItem}>Bump</button>
                 </div>    
             </div>
