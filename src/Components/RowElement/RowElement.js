@@ -61,7 +61,15 @@ function RowElement(props){
                     {props.tableItem.tableno}
                 </div>
                 <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
-                    {props.tableItem.docnumber}
+                    {
+                        props.tableItem.ponum !== "" ?
+                        <div>
+                            <div>{props.tableItem.docnumber}</div>
+                            <div className="ponum">Order#&nbsp;-<span className="ponum">&nbsp;{props.tableItem.ponum}</span></div>
+                        </div>
+                        :
+                        <div>{props.tableItem.docnumber}</div>
+                    }
                 </div>
                 <div className="col-md-1 col-sm-1 col-lg-1 col-xs-1 col-xl-1" style={{minWidth: "100px"}}>
                     {props.tableItem.received}

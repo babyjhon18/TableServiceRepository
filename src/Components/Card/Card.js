@@ -19,8 +19,20 @@ function Card(props){
         <div>
             <div className="mainHeader">
                 <div className="Header">
-                    <div className="col doc">Doc#:<br />
-                    <div className="docValue">{props.tableItem.docnumber}</div></div>
+                    <div className="col doc">
+                    {
+                        props.tableItem.ponum !== "" ? 
+                        <div className="ponum">
+                            <div >Doc#:<br />
+                            <div className="docValue">{props.tableItem.docnumber}</div></div>
+                            <div >Order#&nbsp;-<span className="docValue">&nbsp;{props.tableItem.ponum}</span></div>
+                        </div> :
+                        <div>
+                            <div>Doc#:<br />
+                            <div className="docValue">{props.tableItem.docnumber}</div></div>
+                        </div>
+                    }  
+                    </div>
                     <div className="col tabl">Table#:<br />
                     <div className="tablValue">{props.tableItem.tableno}</div></div>
                     <button className="col bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button>
