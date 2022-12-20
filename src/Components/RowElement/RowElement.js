@@ -65,7 +65,7 @@ function RowElement(props){
                         props.tableItem.ponum !== "" ?
                         <div>
                             <div>{props.tableItem.docnumber}</div>
-                            <div className="ponum">Order#&nbsp;-<span className="ponum">&nbsp;{props.tableItem.ponum}</span></div>
+                            <div>{props.tableItem.ponum}</div>
                         </div>
                         :
                         <div>{props.tableItem.docnumber}</div>

@@ -25,7 +25,7 @@ function Card(props){
                         <div className="ponum">
                             <div >Doc#:<br />
                             <div className="docValue">{props.tableItem.docnumber}</div></div>
-                            <div >Order#&nbsp;-<span className="docValue">&nbsp;{props.tableItem.ponum}</span></div>
+                            <div className="docValue">{props.tableItem.ponum}</div>
                         </div> :
                         <div>
                             <div>Doc#:<br />
