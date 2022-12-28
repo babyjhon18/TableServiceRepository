@@ -9,6 +9,8 @@ export const UPDATE_CARD_VIEW = "UPDATE_CARD_VIEW";
 export const ADD_CARD = "ADD_CARD";
 //Login actions
 export const LOG_IN = "LOG_IN";
+//Other actions
+export const SET_PLAY_AUDIO = "SET_PLAY_AUDIO"
 //Other constants
 export const rowHeader = {
     pid: "ID#",

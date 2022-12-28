@@ -1,18 +1,26 @@
-import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM } from '../Store/Constants'
+import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM, SET_PLAY_AUDIO } from '../Store/Constants'
 
 const initialState = {
-    cards: []
+    cards: [],
+    playAudio: false
 }
 
 export function cardViewReduser(state = initialState, action){
     switch(action.type){
+        case SET_PLAY_AUDIO:{
+            return {
+                ...state,
+                playAudio: false
+            }
+        }
         case UPDATE_CARD_VIEW:{
             const cards = [...state.cards];
             const existedcard = cards.find(card => card.docnumber === action.payload.docnumber);
             if(existedcard == undefined){
                 return {
                     ...state,
-                    cards: [...state.cards, action.payload] 
+                    cards: [...state.cards, action.payload], 
+                    playAudio: true
                 }
             }
             else{
