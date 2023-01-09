@@ -1,6 +1,6 @@
 .time{
     align-self: center;
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: bold;
     color: rgb(87, 87, 87);
 }
@@ -24,5 +24,19 @@
 .chit{
     margin-left: 30px;
     color: #910000;
-    font-size: xx-large
+    font-size: x-large
+}
+
+@media screen and (max-width: 786px){
+    .chit{
+        margin-left: 30px;
+        color: #910000;
+        font-size: large
+    }
+    .time{
+        align-self: center;
+        font-size: large;
+        font-weight: bold;
+        color: rgb(87, 87, 87);
+    }
 }
