@@ -1,5 +1,6 @@
 .mainRow{
     align-items: center;
+    justify-content: space-between;
 }
 .bump button {
     width: 80px;
@@ -9,18 +10,18 @@
 .bump{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
 }
 .itemName{
     font-weight: bold;
 }
 .description{
-    font-size: small;
+    font-size: medium;
     font-weight: normal;
 }
 
 .ponum{
-    font-size: x-small;
+    font-size: small;
 }
 
 @media (min-width: 1000px) {

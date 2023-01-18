@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 import '../CardView/CardView.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { ADD_CARD, CHIT_UPDATE, SET_PLAY_AUDIO, UPDATE_CARD_VIEW} from '../../Store/Constants'
+import { ADD_CARD, CHIT_UPDATE, SET_PLAY_AUDIO, UPDATE_CARD_VIEW, UPDATE_TIMER} from '../../Store/Constants'
 import InfoComponent from '../InfoComponent/InfoComponent';
 
 function CardView(){
@@ -35,6 +35,9 @@ function CardView(){
                 console.log(15);
                 fetchData();
             }, 15000); 
+            setInterval(() => {
+                dispatch({type: UPDATE_TIMER });
+            }, 1000)
         }       
     }, [cards])
 

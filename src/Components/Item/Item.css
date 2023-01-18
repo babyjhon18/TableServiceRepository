@@ -1,11 +1,13 @@
 .itemName{
     margin-left: 5px;
     text-align: start;
+    font-size: small;
 }
 
 .itemQty{
     margin-right: 5px;
     text-align: end;
+    font-size: small;
 }
 
 .mainReady{
