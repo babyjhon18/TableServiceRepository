@@ -51,14 +51,20 @@ function Card(props){
                         {
                             props.tableItem.timeleft != -1 ?
                             <div>
-                                <div className="col timeLeft">Time left: {String(props.tableItem.timeleft/60|0).padStart(2, '0')}:{String(props.tableItem.timeleft%60).padStart(2, '0')}</div>
+                                <div className="col timeLeft">{String(props.tableItem.timeleft/60|0).padStart(2, '0')}:{String(props.tableItem.timeleft%60).padStart(2, '0')}</div>
                             </div>
                             :
                             <div></div>
                         }
                     </div>
                     <div className="col">
-                        <button className="bump" onClick={(event) => readyCard(event)} value={props.tableItem.docnumber}>Ready</button>
+                        {
+                            props.tableItem.items.every((item) => item.status == 2) ?
+                            <button className="bump" onClick={(event) => readyCard(event)} value={props.tableItem.docnumber}>Ready</button> : 
+                            <button className="bump" disabled={"true"} onClick={(event) => readyCard(event)} value={props.tableItem.docnumber}>Ready</button>
+ 
+                        }
+                        {/* <button className="bump" onClick={(event) => readyCard(event)} value={props.tableItem.docnumber}>Ready</button> */}
                         <button className="bump" onClick={(event) => bumpCard(event)} value={props.tableItem.docnumber}>Bump</button>
                     </div>                    
                 </div>

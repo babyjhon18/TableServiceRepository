@@ -3,7 +3,7 @@ import RowElement from "../RowElement/RowElement";
 import { rowHeader } from '../../Store/Constants'
 import '../TableView/TableView.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { TABLE_VIEW, PREPARATION_UPDATE} from '../../Store/Constants'
+import { TABLE_VIEW, PREPARATION_UPDATE, UPDATE_TABLE_TIMER} from '../../Store/Constants'
 import InfoComponent from "../InfoComponent/InfoComponent";
 
 function TableView(){
@@ -36,6 +36,9 @@ function TableView(){
                 console.log(15);
                 fetchData();
             }, 15000); 
+            setInterval(() => {
+                dispatch({type: UPDATE_TABLE_TIMER });
+            }, 1000)
         }      
     }, [table])
 

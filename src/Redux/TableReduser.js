@@ -1,4 +1,4 @@
-import {TABLE_VIEW, UPDATE_TABLE_VIEW, TABLE_BUMP_ITEM} from '../Store/Constants'
+import {TABLE_VIEW, UPDATE_TABLE_VIEW, TABLE_BUMP_ITEM, UPDATE_TABLE_TIMER} from '../Store/Constants'
 
 const initialState = {
     table: [],
@@ -9,6 +9,18 @@ const initialState = {
 
 export function tableViewReduser(state = initialState, action){
     switch(action.type){
+        case UPDATE_TABLE_TIMER:{
+            const table = [...state.table];
+            table.map((tableItem) => {
+                if(tableItem.timeleft > 0){
+                    tableItem.timeleft -= 1;
+                }
+            })
+            return {
+                ...state,
+                table: table
+            }
+        } 
         case TABLE_VIEW:{
             return { 
                 ...state,

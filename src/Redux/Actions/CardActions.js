@@ -1,8 +1,8 @@
-import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM, SET_PLAY_AUDIO, UPDATE_TIMER } from '../../Store/Constants'
+import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM, SET_PLAY_AUDIO, UPDATE_TIMER_CARD } from '../../Store/Constants'
 
 export function UpdateTimer(){
     return {
-        type: UPDATE_TIMER,
+        type: UPDATE_TIMER_CARD,
     }
 }
 

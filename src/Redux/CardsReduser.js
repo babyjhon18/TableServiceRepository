@@ -1,4 +1,4 @@
-import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM, SET_PLAY_AUDIO, UPDATE_TIMER } from '../Store/Constants'
+import { UPDATE_CARD_VIEW, CARD_BUMP_ITEM, SET_PLAY_AUDIO, UPDATE_TIMER_CARD } from '../Store/Constants'
 
 const initialState = {
     cards: [],
@@ -7,12 +7,11 @@ const initialState = {
 
 export function cardViewReduser(state = initialState, action){
     switch(action.type){
-        case UPDATE_TIMER:{
+        case UPDATE_TIMER_CARD:{
             const cards = [...state.cards];
             cards.map((card) => {
                 if(card.timeleft > 0){
                     card.timeleft -= 1;
-                    console.log(card.timeleft);
                 }
             })
             return {

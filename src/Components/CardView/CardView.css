@@ -1,7 +1,7 @@
 .cardList {
   background: white;
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px 300px; 
+  grid-template-columns: 300px 300px 300px 300px; 
   grid-gap: 10px;
 }
 
@@ -13,4 +13,40 @@
   margin: 5px;
   padding: 0px;
   align-self: center;
+}
+
+@media screen and (min-width: 350px){
+  .cardList {
+    background: white;
+    display: grid;
+    grid-template-columns: 300px; 
+    grid-gap: 10px;
+  } 
+}
+
+@media screen and (min-width: 650px){
+  .cardList {
+    background: white;
+    display: grid;
+    grid-template-columns: 300px 300px; 
+    grid-gap: 10px;
+  } 
+}
+
+@media screen and (min-width: 960px){
+  .cardList {
+    background: white;
+    display: grid;
+    grid-template-columns: 300px 300px 300px; 
+    grid-gap: 10px;
+  } 
+}
+
+@media screen and (min-width: 1265px){
+  .cardList {
+    background: white;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px; 
+    grid-gap: 10px;
+  } 
 }

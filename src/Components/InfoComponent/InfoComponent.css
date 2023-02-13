@@ -27,7 +27,7 @@
     font-size: x-large
 }
 
-@media screen and (max-width: 786px){
+@media screen and (min-width: 786px){
     .chit{
         margin-left: 30px;
         color: #910000;

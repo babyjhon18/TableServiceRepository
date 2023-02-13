@@ -2,8 +2,9 @@
 export const TABLE_BUMP_ITEM = "TABLE_BUMP_ITEM";
 export const TABLE_VIEW = "TABLE_VIEW";
 export const UPDATE_TABLE_VIEW = "UPDATE_TABLE_VIEW";
+export const UPDATE_TABLE_TIMER = "UPDATE_TABLE_TIMER";
 //Card actions
-export const UPDATE_TIMER = "UPDATE_TIMER";
+export const UPDATE_TIMER_CARD = "UPDATE_TIMER_CARD";
 export const CARD_BUMP_ITEM = "CARD_BUMP_ITEM";
 export const CARD_VIEW = "CARD_VIEW";
 export const UPDATE_CARD_VIEW = "UPDATE_CARD_VIEW";
@@ -20,8 +21,9 @@ export const rowHeader = {
     received: "Received", 
     tableno: "Table#", 
     qty: "Qty", 
-    name: "Item",
-    modifiers:"Modifiers" 
+    name: "Item", 
+    modifiers: "Modifiers",
+    timeleft: "Completed"
 }
 //links
 export const PREPARATION_UPDATE = "/preparation/update?terminalcode=";

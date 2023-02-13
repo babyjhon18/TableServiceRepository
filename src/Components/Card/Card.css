@@ -23,11 +23,12 @@
 }
 
 .ponum{
-    font-size: x-small;
+    font-size: small;
 }
 
 .timeLeft{
     color: white;
+    text-align: center;
 }
 
 .rec{
@@ -53,6 +54,11 @@
     height:230px;
     width: 100%;
     overflow:auto;
+}
+
+.bump:disabled{
+    background-color: #bcbcbc;
+    color: black;
 }
 
 .bump{
